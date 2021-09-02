@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      There you go!
+    </title>
+    <script>
+      // PREVENT CONTEXT MENU FROM OPENING
+      document.addEventListener("contextmenu", function(evt){
+        evt.preventDefault();
+      }, false);
+
+      // PREVENT CLIPBOARD COPYING
+      document.addEventListener("copy", function(evt){
+        // Change the copied text if you want
+        evt.clipboardData.setData("text/plain", "Copying is not allowed on this webpage");
+
+        // Prevent the default copy action
+        evt.preventDefault();
+      }, false);
+    </script>
+    <style>
+      /* NO SELECT + HIGHLIGHT COLOR */
+      * {
+        user-select: none;
+      }
+      *::selection {
+        background: none;
+      }
+      *::-moz-selection {
+        background: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+     01011001 01101111 01110101 00100000 01100111 01110101 01111001 01110011 00100000 01110111 01100001 01101110 01110100 01100101 01100100 00100000 01110011 01101111 01101101 01100101 00100000 01100011 01101111 01100100 01100101 00101100 00100000 01110010 01101001 01100111 01101000 01110100 00111111
+    </p>
+  </body>
+</html>
